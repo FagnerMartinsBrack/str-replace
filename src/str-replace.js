@@ -8,7 +8,6 @@ var replaceAll = function( oldToken ) {
           var index = -1;
           if ( configs.ignoringCase ) {
               _token = oldToken.toLowerCase();
-              console.log( index );
               while((
                   index = string.toLowerCase().indexOf(
                       _token, index >= 0 ? index + newToken.length : 0
