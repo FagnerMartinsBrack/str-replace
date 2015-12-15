@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/FagnerMartinsBrack/str-replace/issues"
   },
-  "homepage": "https://github.com/FagnerMartinsBrack/str-replace"
+  "homepage": "https://github.com/FagnerMartinsBrack/str-replace",
+  "devDependencies": {
+    "gulp": "3.9.0"
+  }
 }
