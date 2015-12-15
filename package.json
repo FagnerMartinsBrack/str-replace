@@ -1,0 +1,28 @@
+{
+  "name": "str-replace",
+  "version": "0.0.1",
+  "description": "Replace Strings like a boss",
+  "main": "src/replace.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FagnerMartinsBrack/str-replace.git"
+  },
+  "keywords": [
+    "replace",
+    "string",
+    "api",
+    "utility",
+    "util",
+    "javascript",
+    "fluent"
+  ],
+  "author": "Fagner <github@fagnermartins.com> (https://github.com/FagnerMartinsBrack/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FagnerMartinsBrack/str-replace/issues"
+  },
+  "homepage": "https://github.com/FagnerMartinsBrack/str-replace"
+}
