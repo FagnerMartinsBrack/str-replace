@@ -6,5 +6,13 @@ module.exports = {
     var expected = "\\home\\dir";
     assert.strictEqual( actual, expected );
     assert.done();
+  },
+  replace_all_ignoring_case: function( assert ) {
+    var actual = replace.all( "G" ).ignoreCase()
+      .from( "Eggs" )
+      .to( "f" );
+    var expected = "Effs";
+    assert.strictEqual( actual, expected );
+    assert.done();
   }
 };
