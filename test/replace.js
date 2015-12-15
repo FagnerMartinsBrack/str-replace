@@ -19,5 +19,15 @@ module.exports = {
     var expected = "Many Horses";
     assert.strictEqual( actual, expected );
     assert.done();
+  },
+  replace_all_ignoring_case_only_the_first_occurrence: function( assert ) {
+    var actual = replace
+      .all( "/dir" )
+        .ignoreCase()
+        .from( "/Dir\\dir" )
+      .to( "\\dir" );
+      var expected = "\\dir\\dir";
+      assert.strictEqual( actual, expected );
+      assert.done();
   }
 };
