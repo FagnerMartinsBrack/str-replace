@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/FagnerMartinsBrack/str-replace",
   "devDependencies": {
-    "gulp": "3.9.0"
+    "gulp": "3.9.0",
+    "gulp-nodeunit": "0.0.5"
   }
 }
