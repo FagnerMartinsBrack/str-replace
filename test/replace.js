@@ -4,7 +4,7 @@ module.exports = {
   replace_all: function( assert ) {
     var actual = replace
       .all( "/" )
-      .from( "/home/dir" )
+        .from( "/home/dir" )
       .to( "\\" );
     var expected = "\\home\\dir";
     assert.strictEqual( actual, expected );
@@ -14,7 +14,7 @@ module.exports = {
     var actual = replace
       .all( "house" )
         .ignoreCase()
-      .from( "Many Houses" )
+        .from( "Many Houses" )
       .to( "Horse" );
     var expected = "Many Horses";
     assert.strictEqual( actual, expected );
