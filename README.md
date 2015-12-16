@@ -20,7 +20,7 @@ You can't do it without looking into the documentation first to be sure.
 The problem is that the code is written once, but read many times. If you need
 to look elsewhere to be able to understand something, then something is wrong.
 
-Now try to understand the expected output of the code below:
+What if you could tell the computer to "Replace all occurrences ignoring the case from target to replacement"?
 
 ```javascript
 replace
@@ -30,4 +30,4 @@ replace
   .to( "\\dir" );
 ```
 
-It's much easier because the code is able to document itself in a clear manner.
+Tcharam!
