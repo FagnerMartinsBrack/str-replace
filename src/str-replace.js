@@ -4,15 +4,15 @@ var replaceAll = function( oldToken ) {
     from: function( string ) {
       return {
         to: function( newToken ) {
-          var _token;
+          var template;
           var index = -1;
           if ( configs.ignoringCase ) {
-            _token = oldToken.toLowerCase();
+            template = oldToken.toLowerCase();
             while((
               index = string
                 .toLowerCase()
                 .indexOf(
-                  _token,
+                  template,
                   index === -1 ? 0 : index + newToken.length
                 )
               ) !== -1 ) {
