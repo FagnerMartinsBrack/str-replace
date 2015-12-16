@@ -13,8 +13,7 @@ var replaceAll = function( oldToken ) {
                 .toLowerCase()
                 .indexOf(
                   _token,
-                  index >= 0 ?
-                    index + newToken.length : 0
+                  index === -1 ? 0 : index + newToken.length
                 )
               ) !== -1 ) {
               string = string
