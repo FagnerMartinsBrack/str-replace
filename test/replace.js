@@ -17,8 +17,16 @@ module.exports = {
         .from( "Many Houses" )
       .to( "Horse" );
     var expected = "Many Horses";
-    assert.strictEqual( actual, expected );
-    assert.done();
+    assert.strictEqual( actual, expected, "should replace ignoring the case" );
+
+    actual = replace
+      .all( "house" )
+        .from( "Many Houses" )
+      .to( "Horse" );
+      expected = "Many Houses";
+      assert.strictEqual( actual, expected, "should not replace if not ignoring the case" );
+
+      assert.done();
   },
   replace_all_ignoring_case_only_the_first_occurrence: function( assert ) {
     var actual = replace
