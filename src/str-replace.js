@@ -9,14 +9,20 @@ var replaceAll = function( oldToken ) {
           if ( configs.ignoringCase ) {
               _token = oldToken.toLowerCase();
               while((
-                  index = string.toLowerCase().indexOf(
-                      _token, index >= 0 ? index + newToken.length : 0
-                  )) !== -1
+                  index = string
+                    .toLowerCase()
+                    .indexOf(
+                      _token,
+                      index >= 0 ?
+                        index + newToken.length : 0
+                      )
+                    ) !== -1
               ) {
 
-                  string = string.substring( 0, index ) +
+                  string = string
+                    .substring( 0, index ) +
                       newToken +
-                      string.substring( index + newToken.length );
+                    string.substring( index + newToken.length );
               }
               return string;
           }
