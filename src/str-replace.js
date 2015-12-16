@@ -18,7 +18,6 @@ var replaceAll = function( oldToken ) {
                       )
                     ) !== -1
               ) {
-
                   string = string
                     .substring( 0, index ) +
                       newToken +
