@@ -29,5 +29,15 @@ module.exports = {
       var expected = "\\dir\\dir";
       assert.strictEqual( actual, expected );
       assert.done();
+  },
+  replace_all_ignoring_case_only_the_last_occurrence: function( assert ) {
+    var actual = replace
+      .all( "\\dir" )
+        .ignoreCase()
+        .from( "/dir\\Dir" )
+      .to( "/dir" );
+      var expected = "/dir/dir";
+      assert.strictEqual( actual, expected );
+      assert.done();
   }
 };
