@@ -10,7 +10,7 @@ module.exports = {
     assert.strictEqual( actual, expected );
     assert.done();
   },
-  replace_all_ignoring_case: function( assert ) {
+  ignoring_case: function( assert ) {
     var actual = replace
       .all( "house" )
         .ignoreCase()
@@ -28,7 +28,7 @@ module.exports = {
 
       assert.done();
   },
-  replace_all_ignoring_case_only_the_first_occurrence: function( assert ) {
+  ignoring_case_only_the_first_occurrence: function( assert ) {
     var actual = replace
       .all( "/dir" )
         .ignoreCase()
@@ -38,7 +38,7 @@ module.exports = {
       assert.strictEqual( actual, expected );
       assert.done();
   },
-  replace_all_ignoring_case_only_the_last_occurrence: function( assert ) {
+  ignoring_case_only_the_last_occurrence: function( assert ) {
     var actual = replace
       .all( "\\dir" )
         .ignoreCase()
