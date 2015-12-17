@@ -1,36 +1,36 @@
-var replaceAll = function( oldToken ) {
+var replaceAll = function( occurrences ) {
   var configs = this;
   return {
-    from: function( string ) {
+    from: function( target ) {
       return {
-        to: function( newToken ) {
+        to: function( replacement ) {
           var template;
           var index = -1;
           if ( configs.ignoringCase ) {
-            template = oldToken.toLowerCase();
+            template = occurrences.toLowerCase();
             while((
-              index = string
+              index = target
                 .toLowerCase()
                 .indexOf(
                   template,
-                  index === -1 ? 0 : index + newToken.length
+                  index === -1 ? 0 : index + replacement.length
                 )
               ) !== -1 ) {
-              string = string
+              target = target
                 .substring( 0, index ) +
-                  newToken +
-                string.substring( index + newToken.length );
+                  replacement +
+                target.substring( index + replacement.length );
             }
-            return string;
+            return target;
           }
-          return string.split( oldToken ).join( newToken );
+          return target.split( occurrences ).join( replacement );
         }
       };
     },
     ignoringCase: function() {
       return replaceAll.call({
         ignoringCase: true
-      }, oldToken );
+      }, occurrences );
     }
   };
 };
