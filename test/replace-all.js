@@ -13,7 +13,7 @@ module.exports = {
   ignoring_case: function( assert ) {
     var actual = replace
       .all( "house" )
-      .ignoreCase()
+      .ignoringCase()
       .from( "Many Houses" )
       .to( "Horse" );
     var expected = "Many Horses";
@@ -31,7 +31,7 @@ module.exports = {
   ignoring_case_only_the_first_occurrence: function( assert ) {
     var actual = replace
       .all( "/dir" )
-      .ignoreCase()
+      .ignoringCase()
       .from( "/Dir\\dir" )
       .to( "\\dir" );
       var expected = "\\dir\\dir";
@@ -41,7 +41,7 @@ module.exports = {
   ignoring_case_only_the_last_occurrence: function( assert ) {
     var actual = replace
       .all( "\\dir" )
-      .ignoreCase()
+      .ignoringCase()
       .from( "/dir\\Dir" )
       .to( "/dir" );
       var expected = "/dir/dir";

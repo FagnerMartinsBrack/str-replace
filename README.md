@@ -25,7 +25,7 @@ What if you could tell the computer to "Replace all occurrences ignoring the cas
 ```javascript
 replace
   .all( "/dir" )
-  .ignoreCase()
+  .ignoringCase()
   .from( "/Dir\\dir" )
   .to( "\\dir" );
 ```

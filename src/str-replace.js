@@ -27,7 +27,7 @@ var replaceAll = function( oldToken ) {
         }
       };
     },
-    ignoreCase: function() {
+    ignoringCase: function() {
       return replaceAll.call({
         ignoringCase: true
       }, oldToken );
