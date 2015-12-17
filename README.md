@@ -1,6 +1,6 @@
 # String Replace
 
-Replace String using a fluent interface.
+Replace Strings like a boss.
 
 ## Why?
 
