@@ -10,7 +10,7 @@ Try to understand the expected output of the code below:
 replaceAll( "\\dir", "/dir", "/Dir\\dir", true );
 ```
 
-You can't do it without looking into the documentation first to be sure.
+You can't understand it without looking into the documentation first to make sure it does what you want.
 
 * Is it replacing all backslashes to slashes?
 * Is it replacing all slashes to backslashes?
