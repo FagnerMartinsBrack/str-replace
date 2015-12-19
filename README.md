@@ -40,7 +40,7 @@ Tcharam!
 ### replace( occurrences )
 
 Creates a `ReplaceDefinition` that will replace the first substring that
-matches the `occurrences` value.
+matches the `occurrences`.
 
 Receives an `occurrences`, which is a `String` representing what is going to
 be replaced.
@@ -54,7 +54,7 @@ replace( "e" ); // => ReplaceDefinition
 ### replace.all( occurrences )
 
 Creates a `ReplaceDefinition` that will replace all substrings that
-matches the `occurrences` value.
+matches the `occurrences`.
 
 Receives an `occurrences`, which is a `String` representing what is going to
 be replaced.
@@ -67,12 +67,12 @@ replace.all( "dreaming" ); // => ReplaceDefinition
 
 ### ReplaceDefinition
 
-Contains the current strategy for the replace.
+Contains the strategy for the replace.
 
 #### ignoringCase()
 
 Creates a `ReplaceDefinition` that will ignore the case when matching the
-occurrences.
+`occurrences`.
 
 **Example:**
 
