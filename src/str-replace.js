@@ -35,8 +35,16 @@ var replaceAll = function( occurrences ) {
   };
 };
 
-var replace = new function() {
-  // TODO Replace the first occurrence
+var replace = function( occurrences ) {
+  return {
+    from: function( target ) {
+      return {
+        to: function( replacement ) {
+          return target.replace( occurrences, replacement );
+        }
+      };
+    }
+  };
 };
 
 replace.all = replaceAll;
