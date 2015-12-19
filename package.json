@@ -4,7 +4,7 @@
   "description": "Replace Strings like a boss",
   "main": "src/replace.js",
   "scripts": {
-    "test": "test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
