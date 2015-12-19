@@ -1,6 +1,9 @@
 # String Replace
 
-Replace Strings like a boss.
+A simple, lightweight JavaScript API for replacing a String like a boss
+
+* No dependency
+* Fluent interface
 
 ## Why?
 
