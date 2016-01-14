@@ -5,7 +5,7 @@ module.exports = {
     var actual = replace
       .all( "/" )
       .from( "/home/dir" )
-      .to( "\\" );
+      .with( "\\" );
     var expected = "\\home\\dir";
     assert.strictEqual( actual, expected );
     assert.done();
@@ -15,14 +15,14 @@ module.exports = {
       .all( "house" )
       .ignoringCase()
       .from( "Many Houses" )
-      .to( "Horse" );
+      .with( "Horse" );
     var expected = "Many Horses";
     assert.strictEqual( actual, expected, "should replace ignoring the case" );
 
     actual = replace
       .all( "house" )
       .from( "Many Houses" )
-      .to( "Horse" );
+      .with( "Horse" );
       expected = "Many Houses";
       assert.strictEqual( actual, expected, "should not replace if not ignoring the case" );
 
@@ -33,7 +33,7 @@ module.exports = {
       .all( "/dir" )
       .ignoringCase()
       .from( "/Dir\\dir" )
-      .to( "\\dir" );
+      .with( "\\dir" );
       var expected = "\\dir\\dir";
       assert.strictEqual( actual, expected );
       assert.done();
@@ -43,7 +43,7 @@ module.exports = {
       .all( "\\dir" )
       .ignoringCase()
       .from( "/dir\\Dir" )
-      .to( "/dir" );
+      .with( "/dir" );
       var expected = "/dir/dir";
       assert.strictEqual( actual, expected );
       assert.done();

@@ -19,7 +19,7 @@ var CreateReplaceDefinition = function( replaceAlgorithm ) {
 
 var ReplaceOperation = function( replaceExecution ) {
   return {
-    to: replaceExecution
+    with: replaceExecution
   };
 };
 

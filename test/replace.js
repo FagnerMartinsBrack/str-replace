@@ -4,7 +4,7 @@ module.exports = {
   replace_first_occurrence: function( assert ) {
     var actual = replace( "a" )
       .from( "aa" )
-      .to( "e" );
+      .with( "e" );
     var expected = "ea";
     assert.strictEqual( actual, expected );
     assert.done();

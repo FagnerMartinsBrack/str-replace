@@ -23,14 +23,14 @@ You can't understand the order and meaning of the arguments without looking into
 The problem is that the code is written once, but read many times. If you need
 to look elsewhere to be able to understand something, then something is wrong.
 
-What if you could tell the computer to "Replace all occurrences ignoring the case from target to replacement"?
+What if you could tell the computer to "Replace all occurrences ignoring the case from target with replacement"?
 
 ```javascript
 replace
   .all( "/dir" )
   .ignoringCase()
   .from( "/Dir\\dir" )
-  .to( "\\dir" );
+  .with( "\\dir" );
 ```
 
 Tcharam! This changes how you replace strings.
@@ -99,7 +99,7 @@ replace( "Thunder" ).from( "Thunderstorm" ); // => ReplaceOperation
 
 Contains the algorithm representing what should be replaced.
 
-#### to( replacement )
+#### with( replacement )
 
 Creates a `String` replacing with the given `replacement` according to the
 rules of the `ReplaceDefinition`.
@@ -112,6 +112,6 @@ be replaced.
 ```javascript
 var result = replace( "Java" )
   .from( "Java is not JavaScript" )
-  .to( "Type" );
+  .with( "Type" );
 console.log( result ); // => Type is not TypeScript
 ```
