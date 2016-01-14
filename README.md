@@ -1,6 +1,6 @@
 # String Replace
 
-A simple, lightweight JavaScript API for replacing a String like a boss
+A simple, lightweight, functional JavaScript API for replacing a String like a boss
 
 * No dependency
 * Fluent interface
@@ -13,11 +13,11 @@ Try to understand the expected output of the code below:
 replaceAll( "\\dir", "/dir", "/Dir\\dir", true );
 ```
 
-You can't understand it without looking into the documentation first to make sure it does what you want.
+You can't understand the order and meaning of the arguments without looking into the documentation first to make sure it does what you want.
 
 * Is it replacing all backslashes to slashes?
 * Is it replacing all slashes to backslashes?
-* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)?
+* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from  the second?
 * What does that [Boolean Trap](http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html) means?
 
 The problem is that the code is written once, but read many times. If you need
@@ -33,7 +33,9 @@ replace
   .to( "\\dir" );
 ```
 
-Tcharam!
+Tcharam! This changes how you replace strings.
+
+Stop being imperative and start being functional, the next developer say "Thanks".
 
 ## API
 
