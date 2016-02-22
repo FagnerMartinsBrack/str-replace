@@ -1,4 +1,4 @@
-# String Replace
+# JavaScript String Replace
 
 A simple, lightweight, functional JavaScript API for replacing a String like a boss
 
