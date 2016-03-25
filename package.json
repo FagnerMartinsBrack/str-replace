@@ -2,7 +2,7 @@
   "name": "str-replace",
   "version": "0.0.1",
   "description": "Replace Strings like a boss",
-  "main": "src/replace.js",
+  "main": "src/str-replace.js",
   "scripts": {
     "test": "gulp test"
   },
