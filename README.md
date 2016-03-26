@@ -10,14 +10,14 @@ A simple, lightweight, functional JavaScript API for replacing a String like a b
 Try to understand the expected output of the code below:
 
 ```javascript
-replaceAll( "\\dir", "/dir", "/Dir\\dir", true );
+replaceAll( "road", "bus", "Get on the road", true );
 ```
 
 You can't understand the order and meaning of the arguments without looking into the documentation first to make sure it does what you want.
 
 * Is it replacing all backslashes to slashes?
 * Is it replacing all slashes to backslashes?
-* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from  the second?
+* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from the second?
 * What does that [Boolean Trap](http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html) means?
 
 The problem is that the code is written once, but read many times. If you need
@@ -26,11 +26,18 @@ to look elsewhere to be able to understand something, then something is wrong.
 What if you could tell the computer to "Replace all occurrences ignoring the case from target with replacement"?
 
 ```javascript
-replace
-  .all( "/dir" )
-  .ignoringCase()
-  .from( "/Dir\\dir" )
-  .with( "\\dir" );
+const occurrences = "road";
+const target = "Get on the Road";
+const replacement = "bus";
+const result = replace.all( occurrences ).ignoringCase().from( target ).with( replacement );
+console.log(result); // => Get on the bus
+```
+
+Or, if you don't want to use variables:
+
+```javascript
+const result = replace.all( "road" ).ignoringCase().from( "Get on the Road" ).with( "bus" );
+console.log(result); // => Get on the bus
 ```
 
 Tcharam! This changes how you replace strings.
