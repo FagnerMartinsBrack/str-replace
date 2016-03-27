@@ -8,5 +8,14 @@ module.exports = {
     var expected = "ea";
     assert.strictEqual( actual, expected );
     assert.done();
+  },
+  replace_first_occurrence_ignoring_the_case: function( assert ) {
+    var actual = replace( "a" )
+      .ignoringCase()
+      .from( "AA" )
+      .with( "e" );
+    var expected = "eA";
+    assert.strictEqual( actual, expected );
+    assert.done();
   }
 };

@@ -47,7 +47,9 @@ var replaceAll = CreateReplaceDefinition(function( occurrences, replacement, tar
 });
 
 var replace = CreateReplaceDefinition(function( occurrences, replacement, target ) {
-  // TODO Replace the firs occurrence ignoring the case
+  if ( this.ignoringCase ) {
+    return target.replace( new RegExp(occurrences, "i"), replacement );
+  }
   return target.replace( occurrences, replacement );
 });
 
