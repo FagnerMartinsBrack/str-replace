@@ -7,21 +7,22 @@ A simple, lightweight, functional JavaScript API for replacing a String like a b
 
 ## Why?
 
+[Code is read much more often than it is written, so plan accordingly](https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343/), any experienced developer knows that.
+
+The above principle has been ignored for some trivial operations, such as replacing a String. **Not anymore.**
+
 Try to understand the expected output of the code below:
 
 ```javascript
-replaceAll( "road", "bus", "Get on the road", true );
+replaceAll( "bus", "road", "Get on the road", true );
 ```
 
 You can't understand the order and meaning of the arguments without looking into the documentation first to make sure it does what you want.
 
-* Is it replacing all backslashes to slashes?
-* Is it replacing all slashes to backslashes?
-* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from the second?
+* Does the guy who wrote this is aware of the [Principle_of_least_astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from the second? Is it replacing all "bus" to "road"? Or all "road" to "bus"?
 * What does that [Boolean Trap](http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html) means?
 
-The problem is that the code is written once, but read many times. If you need
-to look elsewhere to be able to understand something, then something is wrong.
+If you need to look elsewhere to be able to understand something, then something is wrong.
 
 What if you could tell the computer to "Replace all occurrences ignoring the case from target with replacement"?
 
