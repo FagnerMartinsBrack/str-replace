@@ -1,3 +1,10 @@
+var maybeIgnoringCase = function( string, definitionContext ) {
+  if ( definitionContext.ignoringCase ) {
+    return string.toLowerCase();
+  }
+  return string;
+};
+
 var CreateReplaceDefinition = function( replaceAlgorithm ) {
   var ReplaceDefinition = function( occurrences ) {
     var definitionContext = this;
@@ -46,11 +53,13 @@ var replaceAll = CreateReplaceDefinition(function( occurrences, replacement, tar
   return target.split( occurrences ).join( replacement );
 });
 
-var replace = CreateReplaceDefinition(function( occurrences, replacement, target ) {
-  if ( this.ignoringCase ) {
-    return target.replace( new RegExp(occurrences, "i"), replacement );
-  }
-  return target.replace( occurrences, replacement );
+var replace = CreateReplaceDefinition(function( occurrences, replacement, inputTarget ) {
+  var template = maybeIgnoringCase( occurrences, this );
+  var target = maybeIgnoringCase( inputTarget, this );
+  var firstIndexOfTemplate = target.indexOf( template );
+  return inputTarget.substring( 0, firstIndexOfTemplate ) +
+    replacement +
+    inputTarget.substring( firstIndexOfTemplate + replacement.length );
 });
 
 replace.all = replaceAll;

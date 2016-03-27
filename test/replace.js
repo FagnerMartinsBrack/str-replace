@@ -9,6 +9,14 @@ module.exports = {
     assert.strictEqual( actual, expected );
     assert.done();
   },
+  replace_first_occurrence_with_regex_special_chars: function( assert ) {
+    var actual = replace( "$" )
+      .from( "${template}" )
+      .with( "#" );
+    var expected = "#{template}";
+    assert.strictEqual( actual, expected );
+    assert.done();
+  },
   replace_first_occurrence_ignoring_the_case: function( assert ) {
     var actual = replace( "a" )
       .ignoringCase()
