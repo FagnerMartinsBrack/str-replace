@@ -1,13 +1,5 @@
 var escapeRegexSpecialChars = require("escape-string-regexp");
-
-var replaceAlgorithm = function(occurrences, replacement, inputTarget) {
-  var flags = [];
-  if (this.ignoringCase) {
-    flags.push("i");
-  }
-  var regex = new RegExp(escapeRegexSpecialChars(occurrences), flags.join(""));
-  return inputTarget.replace(regex, replacement);
-};
+var replaceAlgorithm = require( "./replace-algorithm" );
 
 var replaceAllAlgorithm = function(occurrences, replacement, inputTarget) {
   var flags = ["g"];
