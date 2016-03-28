@@ -162,6 +162,14 @@ var result = replace( "Java" ).from( "Java is not JavaScript" ).with( "Type" );
 console.log( result ); // => Type is not TypeScript
 ```
 
+## Manual release steps
+
+* Increment the "version" attribute of `package.json`
+* Commit with the message "Release version x.x.x"
+* Create version tag in git
+* Create a github release
+* Release on npm
+
 ## Authors
 
 * [Fagner Brack](github.com/FagnerMartinsBrack)
