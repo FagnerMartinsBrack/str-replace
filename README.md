@@ -45,6 +45,46 @@ Tcharam! This changes how you replace strings.
 
 Stop being imperative and start being functional, the next developer say "Thanks".
 
+## Installation
+
+Install via npm:
+
+```
+$ npm install str-replace --save
+```
+
+Require in the file you want to use it:
+
+```
+var replace = require("str-replace");
+```
+
+## Basic Usage
+
+Replace the first dot to space:
+
+```
+replace(".").from("John.Doe.Company").with(" "); // => "John Doe.Company"
+```
+
+Replace the first characters ignoring the case when matching:
+
+```
+replace("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY HEY!"
+```
+
+Replace all dots to spaces:
+
+```
+replace.all(".").from("John.Doe.Company").with(" "); // => John Doe Company
+```
+
+Replace all characters ignoring the case when matching:
+
+```
+replace.all("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY YO!"
+```
+
 ## API
 
 ### replace( occurrences )
