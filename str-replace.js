@@ -1,18 +1,18 @@
-var replaceAlgorithm = require( "./replace-algorithm" );
-var replaceAllAlgorithm = require( "./replace-all-algorithm" );
+var replaceAlgorithm = require("./replace-algorithm");
+var replaceAllAlgorithm = require("./replace-all-algorithm");
 
-var CreateReplaceDefinition = function( replaceAlgorithm ) {
-  var ReplaceDefinition = function( occurrences ) {
+var CreateReplaceDefinition = function(replaceAlgorithm) {
+  var ReplaceDefinition = function(occurrences) {
     var definitionContext = this;
     return {
       ignoringCase: function() {
         return ReplaceDefinition.call({
           ignoringCase: true
-        }, occurrences );
+        }, occurrences);
       },
-      from: function( target ) {
-        return ReplaceOperation(function executeReplace( replacement ) {
-          return replaceAlgorithm.call( definitionContext, occurrences, replacement, target );
+      from: function(target) {
+        return ReplaceOperation(function executeReplace(replacement) {
+          return replaceAlgorithm.call(definitionContext, occurrences, replacement, target);
         });
       }
     };
@@ -20,7 +20,7 @@ var CreateReplaceDefinition = function( replaceAlgorithm ) {
   return ReplaceDefinition;
 };
 
-var ReplaceOperation = function( replaceExecution ) {
+var ReplaceOperation = function(replaceExecution) {
   return {
     with: replaceExecution
   };

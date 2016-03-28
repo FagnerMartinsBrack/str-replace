@@ -1,1 +1,1 @@
-module.exports = require( "str-replace" );
+module.exports = require("str-replace");

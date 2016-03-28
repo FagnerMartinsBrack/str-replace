@@ -22,7 +22,7 @@ describe("Replace all", function() {
   it("should replace all occurrences ignoring the case", function() {
     var replaceAllHouseIgnoringCase = replace.all("house").ignoringCase();
     expect(replaceAllHouseIgnoringCase.from("Many Houses").with("Horse")).to.be("Many Horses");
-    expect(replace.all( "house" ).from( "Many Houses" ).with( "Horse" )).to.be("Many Houses");
+    expect(replace.all("house").from("Many Houses").with("Horse")).to.be("Many Houses");
   });
 
 });
