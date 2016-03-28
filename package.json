@@ -30,6 +30,7 @@
     "gulp-nodeunit": "0.0.5"
   },
   "dependencies": {
-    "escape-string-regexp": "1.0.5"
+    "escape-string-regexp": "1.0.5",
+    "partial-application": "0.0.17"
   }
 }
