@@ -20,3 +20,23 @@ describe("Replace all", function() {
     expect(replace.all("house").from("Many Houses").with("Horse")).to.be("Many Houses");
   });
 });
+
+describe("Replace algorithm", function() {
+  it("should replace regex special characters", function() {
+    expect(replace(".").from(".").with("a")).to.be("a");
+    expect(replace("*").from("*").with("a")).to.be("a");
+    expect(replace("+").from("+").with("a")).to.be("a");
+    expect(replace("?").from("?").with("a")).to.be("a");
+    expect(replace("^").from("^").with("a")).to.be("a");
+    expect(replace("$").from("$").with("a")).to.be("a");
+    expect(replace("{").from("{").with("a")).to.be("a");
+    expect(replace("}").from("}").with("a")).to.be("a");
+    expect(replace("(").from("(").with("a")).to.be("a");
+    expect(replace(")").from(")").with("a")).to.be("a");
+    expect(replace("|").from("|").with("a")).to.be("a");
+    expect(replace("[").from("[").with("a")).to.be("a");
+    expect(replace("]").from("]").with("a")).to.be("a");
+    expect(replace("\\").from("\\").with("a")).to.be("a");
+    expect(replace("\d").from("\d").with("a")).to.be("a");
+  });
+});
