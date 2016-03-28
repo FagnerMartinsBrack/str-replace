@@ -55,7 +55,7 @@ $ npm install str-replace --save
 
 Require in the file you want to use it:
 
-```
+```javascript
 var replace = require("str-replace");
 ```
 
@@ -63,25 +63,25 @@ var replace = require("str-replace");
 
 Replace the first dot to space:
 
-```
+```javascript
 replace(".").from("John.Doe.Company").with(" "); // => "John Doe.Company"
 ```
 
 Replace the first characters ignoring the case when matching:
 
-```
+```javascript
 replace("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY HEY!"
 ```
 
 Replace all dots to spaces:
 
-```
+```javascript
 replace.all(".").from("John.Doe.Company").with(" "); // => John Doe Company
 ```
 
 Replace all characters ignoring the case when matching:
 
-```
+```javascript
 replace.all("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY YO!"
 ```
 
