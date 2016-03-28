@@ -1,4 +1,4 @@
-var replace = require( "../src/str-replace" );
+var replace = require( "../str-replace" );
 
 module.exports = {
   replace_first_occurrence: function( assert ) {
