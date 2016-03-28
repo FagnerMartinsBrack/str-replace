@@ -161,3 +161,7 @@ be replaced.
 var result = replace( "Java" ).from( "Java is not JavaScript" ).with( "Type" );
 console.log( result ); // => Type is not TypeScript
 ```
+
+## Authors
+
+* [Fagner Brack](github.com/FagnerMartinsBrack)
