@@ -28,5 +28,8 @@
     "gulp": "3.9.0",
     "gulp-istanbul": "0.10.3",
     "gulp-nodeunit": "0.0.5"
+  },
+  "dependencies": {
+    "escape-string-regexp": "1.0.5"
   }
 }

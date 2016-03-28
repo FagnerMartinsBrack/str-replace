@@ -1,6 +1,4 @@
-var escapeRegexSpecialChars = function(input) {
-  return input.replace(/[$*+?^()|\[\]\\]/, "\\$&");
-};
+var escapeRegexSpecialChars = require("escape-string-regexp");
 
 var replaceAlgorithm = function(occurrences, replacement, inputTarget) {
   var flags = [];
