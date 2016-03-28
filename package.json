@@ -1,6 +1,6 @@
 {
   "name": "str-replace",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Replace Strings like a boss",
   "scripts": {
     "test": "mocha"
