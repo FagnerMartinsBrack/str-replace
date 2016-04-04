@@ -172,4 +172,4 @@ console.log( result ); // => Type is not TypeScript
 
 ## Authors
 
-* [Fagner Brack](github.com/FagnerMartinsBrack)
+* [Fagner Brack](https://github.com/FagnerMartinsBrack)
