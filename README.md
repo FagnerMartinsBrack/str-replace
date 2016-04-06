@@ -70,7 +70,7 @@ replace(".").from("John.Doe.Company").with(" "); // => "John Doe.Company"
 Replace the first characters ignoring the case when matching:
 
 ```javascript
-replace("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY HEY!"
+replace("hey").ignoringCase().from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY HEY!"
 ```
 
 Replace all dots to spaces:
@@ -82,7 +82,7 @@ replace.all(".").from("John.Doe.Company").with(" "); // => John Doe Company
 Replace all characters ignoring the case when matching:
 
 ```javascript
-replace.all("hey").from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY YO!"
+replace.all("hey").ignoringCase().from("HEY, DON'T SAY HEY!").with("YO"); // => "YO, DON'T SAY YO!"
 ```
 
 ## API
