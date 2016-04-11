@@ -43,7 +43,7 @@ console.log(result); // => Get on the bus
 
 Tcharam! This changes how you replace strings.
 
-Stop being imperative and start being functional, the next developer say "Thanks".
+Stop using functions that are impossible to understand, the next developer say "Thanks".
 
 ## Installation
 
