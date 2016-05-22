@@ -17,7 +17,7 @@ Try to understand the expected output of the code below:
 replaceAll( "bus", "road", "Get on the road", true );
 ```
 
-You can't understand the order and meaning of the arguments without looking into the documentation first to make sure it does what you want.
+It is impossible to understand the order and meaning of the arguments by looking at the code:
 
 * Does the guy who wrote this is aware of the [Principle of least astonishment](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) to replace the first argument from the second? Is it replacing all "bus" to "road"? Or all "road" to "bus"?
 * What does that [Boolean Trap](http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html) means?
