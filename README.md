@@ -159,7 +159,7 @@ be replaced.
 
 ```javascript
 var result = replace( "Java" ).from( "Java is not JavaScript" ).with( "Type" );
-console.log( result ); // => Type is not TypeScript
+console.log( result ); // => Type is not JavaScript
 ```
 
 ## Manual release steps
